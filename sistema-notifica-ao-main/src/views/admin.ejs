@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Administrativa</title>
+
+    <!-- Fonte Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Cabeçalho estilizado */
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #d8dbe2, #ac9dbd);
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* Estilizando o formulário */
+        .task-form {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .task-form label {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .task-form input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border 0.3s ease-in-out;
+        }
+
+        .task-form input:focus {
+            border-color: #2575fc;
+            outline: none;
+        }
+
+        /* Botão estilizado */
+        .submit-button {
+            background: linear-gradient(135deg, #d8dbe2, #ac9dbd);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .submit-button:hover {
+            background: #646464;
+        }
+
+        /* Link para ver a tela do usuário */
+        .view-user {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 18px;
+            background: #2a9d8f;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: background 0.3s;
+            text-align: center;
+        }
+
+        .view-user:hover {
+            background: #238b7a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>📌 Tela Administrativa</h1>
+    </header>
+
+    <form action="/submit-task" method="POST" class="task-form">
+        <label for="task">Tarefa:</label>
+        <input type="text" id="task" name="task" placeholder="Digite a nova tarefa..." required>
+        <button type="submit" class="submit-button">✅ Adicionar Tarefa</button>
+    </form>
+
+</body>
+
+</html>
